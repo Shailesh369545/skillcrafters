@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz - SkillCrafters</title>
+    <link rel="stylesheet" href="quiz_style.css">
+    <style>
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="home.html" class="home-button">Back to Home</a>
+    <header>
+        <h1>JavaScript Quiz</h1>
+    </header>
+
+    <main class="content">
+        <h2>Test Your JavaScript Knowledge</h2>
+
+        <form id="quizForm" action="javascript_quiz_result.html" method="GET">
+            <p>1. What is JavaScript?</p>
+            <input type="radio" name="q1" value="a" required> A markup language<br>
+            <input type="radio" name="q1" value="b"> A styling language<br>
+            <input type="radio" name="q1" value="c"> A programming language<br>
+
+            <p>2. Which operator is used for strict equality comparison?</p>
+            <input type="radio" name="q2" value="a" required> ==<br>
+            <input type="radio" name="q2" value="b"> =<br>
+            <input type="radio" name="q2" value="c"> ===<br>
+
+            <p>3. How do you declare a variable in JavaScript?</p>
+            <input type="radio" name="q3" value="a" required> var<br>
+            <input type="radio" name="q3" value="b"> let<br>
+            <input type="radio" name="q3" value="c"> Both var and let<br>
+
+            <p>4. What is the correct way to write an array in JavaScript?</p>
+            <input type="radio" name="q4" value="a" required> {1, 2, 3}<br>
+            <input type="radio" name="q4" value="b"> [1, 2, 3]<br>
+            <input type="radio" name="q4" value="c"> (1, 2, 3)<br>
+
+            <p>5. Which method adds an element to the end of an array?</p>
+            <input type="radio" name="q5" value="a" required> shift()<br>
+            <input type="radio" name="q5" value="b"> push()<br>
+            <input type="radio" name="q5" value="c"> unshift()<br>
+
+            <p>6. What is the correct way to write a function in JavaScript?</p>
+            <input type="radio" name="q6" value="a" required> func myFunction()<br>
+            <input type="radio" name="q6" value="b"> function myFunction()<br>
+            <input type="radio" name="q6" value="c"> def myFunction()<br>
+
+            <br>
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+</body>
+</html>

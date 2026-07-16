@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz Results - SkillCrafters</title>
+    <link rel="stylesheet" href="quiz_style.css">
+    <style>
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            let score = 0;
+            const totalQuestions = 6;
+            const correctAnswers = {
+                q1: 'c', // Cascading Style Sheets
+                q2: 'c', // background-color
+                q3: 'a', // font-size
+                q4: 'b', // font-family
+                q5: 'b', // #demo
+                q6: 'b'  // padding
+            };
+
+            // Calculate score
+            for (let question in correctAnswers) {
+                if (params.get(question) === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            // Display results
+            document.getElementById('score').textContent = score;
+            document.getElementById('total').textContent = totalQuestions;
+            
+            // Calculate percentage
+            const percentage = (score / totalQuestions) * 100;
+            document.getElementById('percentage').textContent = percentage.toFixed(1);
+            
+            // Set feedback message
+            let feedback = '';
+            if (percentage >= 80) {
+                feedback = 'Excellent! You have a great understanding of CSS!';
+            } else if (percentage >= 60) {
+                feedback = 'Good job! Keep practicing to improve your CSS knowledge.';
+            } else {
+                feedback = 'Keep learning! We recommend reviewing CSS basics.';
+            }
+            document.getElementById('feedback').textContent = feedback;
+        };
+    </script>
+</head>
+<body>
+    <a href="home.html" class="home-button">Back to Home</a>
+    <header>
+        <h1>CSS Quiz Results</h1>
+    </header>
+
+    <main class="content">
+        <div style="background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <h2>Your CSS Quiz Results</h2>
+            <p style="font-size: 24px; margin: 20px 0;">
+                You scored <span id="score">0</span> out of <span id="total">6</span>
+            </p>
+            <p style="font-size: 20px; margin: 20px 0;">
+                Percentage: <span id="percentage">0</span>%
+            </p>
+            <p id="feedback" style="font-size: 18px; margin: 20px 0; color: #007bff;"></p>
+            
+            <button onclick="window.location.href='quiz_css.html'" style="margin-top: 20px;">
+                Try Again
+            </button>
+        </div>
+    </main>
+</body>
+</html> 

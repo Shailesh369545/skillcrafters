@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Quiz - SkillCrafters</title>
+    <link rel="stylesheet" href="quiz_style.css">
+    <style>
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="home.html" class="home-button">Back to Home</a>
+    <header>
+        <h1>CSS Quiz</h1>
+    </header>
+
+    <main class="content">
+        <h2>Test Your CSS Knowledge</h2>
+
+        <form id="quizForm" action="css_quiz_result.html" method="GET">
+            <p>1. What does CSS stand for?</p>
+            <input type="radio" name="q1" value="a" required> Computer Style Sheets<br>
+            <input type="radio" name="q1" value="b"> Creative Style Sheets<br>
+            <input type="radio" name="q1" value="c"> Cascading Style Sheets<br>
+
+            <p>2. Which property is used to change the background color?</p>
+            <input type="radio" name="q2" value="a" required> color<br>
+            <input type="radio" name="q2" value="b"> bgcolor<br>
+            <input type="radio" name="q2" value="c"> background-color<br>
+
+            <p>3. Which CSS property controls the text size?</p>
+            <input type="radio" name="q3" value="a" required> font-size<br>
+            <input type="radio" name="q3" value="b"> text-size<br>
+            <input type="radio" name="q3" value="c"> text-style<br>
+
+            <p>4. Which property is used to change the font of an element?</p>
+            <input type="radio" name="q4" value="a" required> font-style<br>
+            <input type="radio" name="q4" value="b"> font-family<br>
+            <input type="radio" name="q4" value="c"> font-type<br>
+
+            <p>5. How do you select an element with id 'demo'?</p>
+            <input type="radio" name="q5" value="a" required> .demo<br>
+            <input type="radio" name="q5" value="b"> #demo<br>
+            <input type="radio" name="q5" value="c"> *demo<br>
+
+            <p>6. Which property is used to create space between elements border and content?</p>
+            <input type="radio" name="q6" value="a" required> spacing<br>
+            <input type="radio" name="q6" value="b"> padding<br>
+            <input type="radio" name="q6" value="c"> margin<br>
+
+            <br>
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+</body>
+</html>
